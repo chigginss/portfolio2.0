@@ -22,11 +22,8 @@ $large-font: 24px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: $med-size;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 3s;
+  margin-top: $huge-size;
+  margin-bottom: $huge-size;
   background-color: $white;
   width: 100%;
 
@@ -35,26 +32,17 @@ $large-font: 24px;
     flex: 1;
   }
 
-  .aboutMeText {
-    color: $dark-base;
-    font-size: $large-font;
-    font-weight: lighter;
-    margin: $large-font;
-    text-align: left;
-    width: 800px;
-  }
-
   .aboutMeContainer {
     display: flex;
   }
 }
 
-.contactMeText {
+.aboutMeText {
   color: $dark-base;
   font-size: $large-font;
-  font-weight: light;
-  margin: $large-size;
-  text-align: center;
+  font-weight: lighter;
+  margin: $large-font;
+  text-align: left;
   width: 800px;
 }
 
@@ -230,7 +218,8 @@ $large-font: 24px;
 
 .contact {
   width: 100%;
-  margin: $large-size;
+  margin-top: $huge-size;
+  margin-bottom: $huge-size;
   background-color: $white;
 }
 
@@ -243,14 +232,10 @@ $large-font: 24px;
   text-align: center;
   transition: opacity 0.5s;
   opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 3s;
 }
 
 .content {
-  background-color: $dark-base;
+  background-color: $white;
   font-family: 'Spartan', sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -317,20 +302,44 @@ $large-font: 24px;
   text-decoration: none;
 }
 
+.fade-in-section-about {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section-about.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 .experience {
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: $huge-size;
+  margin-bottom: $huge-size;
   width: 800px;
   text-align: center;
   opacity: 1;
-  animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 3s;
 }
 
 .footer {
@@ -343,7 +352,7 @@ $large-font: 24px;
 }
 
 .footerText {
-  color: $light-base;
+  color: $dark-base;
   display: flex;
   padding: $large-size;
   flex-direction: row;
@@ -356,7 +365,7 @@ $large-font: 24px;
 }
 
 .headerBackground {
-  background-color: $dark-base;
+  background-color: $white;
   height: 50px;
   opacity: 0.8;
   position: fixed;
@@ -402,13 +411,13 @@ $large-font: 24px;
   margin: $large-size;
   
   &:hover {
-    color: $white;
+    color: $dark-base;
     text-decoration: none;
   }
 }
 
 .headerName {
-  color: $light-base;
+  color: $dark-base;
   font-family: 'Bungee', cursive;
   font-size: $med-font;
   padding-left: $med-size;
@@ -444,7 +453,7 @@ $large-font: 24px;
   max-width: $large-size;
   
   &:hover path {
-    fill: $white;
+    fill: $dark-base;
     text-decoration: none;
   }
 }
@@ -454,13 +463,13 @@ $large-font: 24px;
   max-width: $large-size;
   
   &:hover path {
-    fill: $link-base;
+    fill: $dark-base;
     text-decoration: none;
   }
 }
 
 .experienceTitle {
-  color: $light-base;
+  color: $dark-base;
   font-family: 'Spartan', sans-serif;
   font-weight: bold;
   font-size: $huge-size;
@@ -482,35 +491,26 @@ $large-font: 24px;
 }
 
 .link {
-  color: $link-base;
+  color: $light-base;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   
   &:hover {
-    color: $light-base;
+    color: $dark-base;
     text-decoration: none;
   }
 }
 
 .mainSection {
   align-items: center;
-  background-color: $dark-base;
-  color: $light-base;
+  background-color: $white;
+  color: $dark-base;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 100px;
   text-align: center;
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .menu {
@@ -567,12 +567,12 @@ $large-font: 24px;
 }
 
 .portrait {
-  max-height: 700px;
-  max-width: 700px;
+  max-height: 450px;
+  max-width: 450px;
 }
 
 .meText {
-  color: $light-base;
+  color: $dark-base;
   flex-direction: column;
   font-size: $large-font;
   font-weight: lighter;
@@ -661,9 +661,9 @@ $large-font: 24px;
 }
 
 .resumeButton:hover {
-  background-color: $link-base;
+  background-color: $white;
   color: $dark-base;
-  border: 1px solid $link-base;
+  border: 1px solid $dark-base;
   text-decoration: none;
 }
 
@@ -674,7 +674,7 @@ $large-font: 24px;
 }
 
 .skillTitle {
-  color: $light-base;
+  color: $dark-base;
   font-family: 'Spartan', sans-serif;
   font-size: $small-font;
   max-width: 300px;
@@ -690,6 +690,7 @@ $large-font: 24px;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 600px;
 }
 
 .welcomeText {

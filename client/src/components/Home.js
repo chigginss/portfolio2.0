@@ -1,8 +1,7 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 // components
 import About from './About.js';
 import Experience from './Experience.js';
-import FooterArt from './FooterArt.js';
 import Header from './Header.js';
 import Contact from './Contact.js';
 // SCSS
@@ -50,11 +49,11 @@ class Home extends Component {
           <Header/>
           <div className="welcomeTextContainer">
             <div className="welcomeText">
-                <div className="hugeTitle">My Name? My name is Bella Hadid...!</div>
+                <div className="hugeTitle">BUG CATCHER, ERROR BASHER, WEB BUILDER</div>
             </div>
             <a className="resumeButton" href="#about">DISCOVER MORE</a>
           </div>
-          <div className="mainSection fadeIn" style={{ opacity: `${this.state.opacity}`}}>
+          <div className="mainSection fadeIn" styles={{ opacity: `${this.state.opacity}`}}>
             <About/>
             <Experience/>
             <Contact />

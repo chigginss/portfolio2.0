@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MailIcon from '../icons/MailIcon.js';
 import LinkedInIcon from '../icons/LinkedInIcon.js';
 import GitHubIcon from '../icons/GitHubIcon.js';
 
@@ -15,14 +16,17 @@ function Header() {
                     <a href="#about" className="headerLink">About</a>
                     <a href="#experience" className="headerLink">Experience</a>
                     <a href="#contact" className="headerLink">Contact</a>
-                    <div>
+                    {/* <div>
                         <a href='https://github.com/chigginss'>
-                            <GitHubIcon className={"icon"} style={style} width={'20px'} />
+                            <GitHubIcon className={"icon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
                         </a>
                         <a href='https://www.linkedin.com/in/cierra-m-higgins/'>
                             <LinkedInIcon className={"icon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
                         </a>
-                    </div>
+                        <a href="mailto:cierramhiggins@gmail.com">
+                            <MailIcon className={"darkIcon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
+                        </a>
+                    </div> */}
                 </div>
                 <div className={open ? 'burgerOpen' : 'burgerClosed'} onClick={() => setOpen(!open)}>
                     <div></div>
