@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../css/portfolio.scss';
-import Resume from '../content/CierraHigginsResume.pdf';
 
 export default function Experience() {
 
@@ -15,12 +14,9 @@ export default function Experience() {
   }, []);
   
   return (
-    <div className={`experience fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
-      <div id="experience" className='experienceTitle'>Projects && Experience</div>
-      <p className='aboutMeText'>
-        I have over 3 years experience in Web, iOS and Android development. Most recently I worked at <a className='link' href='hbomax.com'>HBO MAX</a>, and previously at 
-        <a className='link' href='grokker.com'> Grokker.</a> </p>
-        <p  className='aboutMeText'>In my free time, I've build several React/Express sites (like this one), several Instagram Effects, and small projects with Blender and Unity.</p>
+    <div id="experience" className={`experience fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
+      <div className='leftTitle'>Stack</div>
+      <div className="experienceContent">
         <div className='columnContainer'>
           <div className='column'>
             <div className='skillTitle'>JAVASCRIPT (ES6)</div>
@@ -47,7 +43,7 @@ export default function Experience() {
             <div className='skillTitle'>CONFLUENCE</div>
           </div>
         </div>
-        <a className='resumeButton' download='resume' href={Resume} rel="noreferrer" target='_blank'>DOWNLOAD RESUME</a>
+      </div>
     </div>
   );
 }

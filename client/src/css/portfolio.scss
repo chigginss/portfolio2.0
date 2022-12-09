@@ -1,5 +1,6 @@
 // GOOGLE FONTS
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Bungee&family=Josefin+Sans&family=Mukta:wght@200&family=Spartan:wght@200;570;600&family=Yanone+Kaffeesatz:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=Nabla&display=swap');
 // COLORS
 $light-base: #BE97C6;
 $dark-base: #4B5267;
@@ -11,6 +12,7 @@ $med-size: 20px;
 $large-size: 30px;
 $xlarge-size: 35px;
 $huge-size: 55px;
+$massive-size: 140px;
 // FONT SIZE
 $small-font: 14px;
 $med-font: 18px;
@@ -19,15 +21,17 @@ $large-font: 24px;
 
 .about {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: row;
   justify-content: center;
   margin-top: $huge-size;
   margin-bottom: $huge-size;
-  background-color: $white;
-  width: 100%;
+  margin-left: $huge-size;
+  width: 800px;
 
   .aboutMe {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     flex: 1;
   }
@@ -43,7 +47,6 @@ $large-font: 24px;
   font-weight: lighter;
   margin: $large-font;
   text-align: left;
-  width: 800px;
 }
 
 .absolute {
@@ -217,20 +220,18 @@ $large-font: 24px;
 }
 
 .contact {
-  width: 100%;
+  height: 400px;
+  margin-left: $huge-size;
   margin-top: $huge-size;
   margin-bottom: $huge-size;
   background-color: $white;
 }
 
 .contactContent {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: $large-size;
-  text-align: center;
   transition: opacity 0.5s;
+  width: 800px;
   opacity: 1;
 }
 
@@ -240,6 +241,10 @@ $large-font: 24px;
   overflow-x: hidden;
   position: relative;
   font-weight: 570;
+  background: linear-gradient(-45deg, $link-base, $link-base, $white, $white);
+	background-size: 400% 400%;
+	animation: gradient 2.5s ease;
+	height: 100vh;
 }
 
 .contactInfo {
@@ -318,9 +323,9 @@ $large-font: 24px;
 
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20vh);
+  transform: translateY(9vh);
   visibility: hidden;
-  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  transition: opacity 0.6s ease-out, transform .8s ease-out;
   will-change: opacity, visibility;
 }
 
@@ -333,13 +338,27 @@ $large-font: 24px;
 .experience {
   align-items: center;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  margin-left: $huge-size;
   margin-top: $huge-size;
   margin-bottom: $huge-size;
   width: 800px;
   text-align: center;
   opacity: 1;
+}
+
+.experienceContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.experienceText {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .footer {
@@ -354,7 +373,7 @@ $large-font: 24px;
 .footerText {
   color: $dark-base;
   display: flex;
-  padding: $large-size;
+  padding: $large-font;
   flex-direction: row;
   justify-content: center;
   font-family: 'Bungee', cursive;
@@ -427,10 +446,26 @@ $large-font: 24px;
   display: none;
 }
 
+.displayTitle {
+  color: $dark-base;
+  font-family: "Nabla";
+  font-palette: --myPalette;
+  font-size: $massive-size;
+  font-weight: bold;
+  margin-bottom: $med-size;
+  text-align: center;
+}
+
+@font-palette-values --myPalette {
+  font-family: "Nabla";
+  base-palette: 4;
+  override-colors: 6 $link-base;
+}
+
 .hugeTitle {
-  color: $light-base;
+  color: $dark-base;
   font-family: 'Spartan', sans-serif;
-  font-size: $huge-size;
+  font-size: 25px;
   font-weight: bold;
   text-align: center;
   width: 50%;
@@ -474,8 +509,9 @@ $large-font: 24px;
   font-weight: bold;
   font-size: $huge-size;
   justify-content: center;
-  text-align: center;
-  margin: 20px;
+  text-align: left;
+  margin-left: $huge-size;
+  margin-left: $huge-size;
   width: 100%;
 }
 
@@ -486,7 +522,20 @@ $large-font: 24px;
   font-size: $huge-size;
   justify-content: flex-start;
   text-align: left;
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.rightTitle {
+  color: $dark-base;
+  font-family: 'Spartan', sans-serif;
+  font-weight: bold;
+  font-size: $huge-size;
+  justify-content: flex-end;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
   width: 100%;
 }
 
@@ -502,9 +551,32 @@ $large-font: 24px;
   }
 }
 
+.lineUp {
+  animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+
 .mainSection {
   align-items: center;
-  background-color: $white;
+  // background-color: $white;
   color: $dark-base;
   display: flex;
   flex-direction: column;
@@ -512,6 +584,19 @@ $large-font: 24px;
   margin-top: 100px;
   text-align: center;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .menu {
   opacity: 1;
@@ -649,7 +734,7 @@ $large-font: 24px;
 }
 
 .resumeButton {
-  border: 1px solid $light-base;
+  // border: 1px solid $light-base;
   border-radius: $small-size;
   background-color: $white;
   color: $light-base;
@@ -663,7 +748,7 @@ $large-font: 24px;
 .resumeButton:hover {
   background-color: $white;
   color: $dark-base;
-  border: 1px solid $dark-base;
+  // border: 1px solid $dark-base;
   text-decoration: none;
 }
 
@@ -754,6 +839,10 @@ $large-font: 24px;
     font-size: $large-size;
   }
 
+  .displayTitle {
+    font-size: $huge-size;
+  }
+
   .experienceTitle {
     font-size: $large-size;
     max-width: 300px;
@@ -786,7 +875,7 @@ $large-font: 24px;
   }
 
   .hugeTitle {
-    font-size: $large-size;
+    font-size: $small-font;
   }
 
   .leftTitle {

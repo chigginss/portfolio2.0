@@ -14,19 +14,7 @@ function Header() {
                 </div>
                 <div className="headerLinks">
                     <a href="#about" className="headerLink">About</a>
-                    <a href="#experience" className="headerLink">Experience</a>
                     <a href="#contact" className="headerLink">Contact</a>
-                    {/* <div>
-                        <a href='https://github.com/chigginss'>
-                            <GitHubIcon className={"icon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
-                        </a>
-                        <a href='https://www.linkedin.com/in/cierra-m-higgins/'>
-                            <LinkedInIcon className={"icon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
-                        </a>
-                        <a href="mailto:cierramhiggins@gmail.com">
-                            <MailIcon className={"darkIcon"} style={{ 'margin': '30px 30px 10px 10px' }} width={'20px'} />
-                        </a>
-                    </div> */}
                 </div>
                 <div className={open ? 'burgerOpen' : 'burgerClosed'} onClick={() => setOpen(!open)}>
                     <div></div>
@@ -35,8 +23,6 @@ function Header() {
                 </div>
                 <div className={open ? 'menuOpen' : 'menuClosed'}>
                     <a href="#about" onClick={() => setOpen(!open)}>About</a>
-                    <a href="#experience" onClick={() => setOpen(!open)}>Experience</a>
-                    <a href="#projects" onClick={() => setOpen(!open)}>Projects</a>
                     <a href="#contact" onClick={() => setOpen(!open)}>Contact</a>
                 </div>
             </div>

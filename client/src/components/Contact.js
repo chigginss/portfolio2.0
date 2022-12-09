@@ -17,22 +17,20 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className={`contact fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
-      <div className="contactContent">
-        <div id="contact">
-            <h1 className="centerTitleDark">Let's Chat!</h1>
-            <p className="aboutMeText">I'm currently looking for new opportunities, in New Zealand, the US and everywhere in-between.</p>
-        </div>
+    <div className={`fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
+      <div id="contact" className="contactContent">
+        <h1 className="leftTitle">Let's Chat!</h1>
+        <p className="aboutMeText">I'm currently looking for new opportunities, in New Zealand, the US and everywhere else.</p>
       </div>
       <div className="socialIcons" >
-        <a href='https://github.com/chigginss'>
-            <GitHubIcon className={"darkIcon"} />
+        <a href="mailto:cierramhiggins@gmail.com">
+            <MailIcon className={"darkIcon"} />
         </a>
         <a href='https://www.linkedin.com/in/cierra-m-higgins/'>
             <LinkedInIcon className={"darkIcon"} />
         </a>
-        <a href="mailto:cierramhiggins@gmail.com">
-            <MailIcon className={"darkIcon"} />
+        <a href='https://github.com/chigginss'>
+            <GitHubIcon className={"darkIcon"} />
         </a>
       </div>
     </div>

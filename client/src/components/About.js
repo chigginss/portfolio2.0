@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/portfolio.scss';
 import portrait from '../images/portrait1.jpg';
+import Resume from '../content/CierraHigginsResume.pdf';
 
 export default function About() {
 
@@ -20,10 +21,9 @@ export default function About() {
       <div className="aboutMeContainer">
         <img className="portrait" src={portrait} alt="portrait" />
         <div className="aboutMe">
-          <div className="leftTitle">Hi! I'm Cierra</div>
-          <p className="aboutMeText">I'm a Software Engineer and enjoy creating highly responsive applications and websites.</p>
-          <p className="aboutMeText">I recently packed up my life in America, travelled around Asia, and settled in New Zealand.</p>
-          <p className="aboutMeText">When I'm not coding, I love hiking, going to the beach, playing video games and working on photo and video projects. </p>
+          <p className="aboutMeText">Hi, I'm Cierra! I have over 3 years experience in Web, iOS and Android development.  </p>
+          <p className='aboutMeText'> I've worked at <a className='link' href='hbomax.com'>HBO MAX</a>, and previously at <a className='link' href='grokker.com'> Grokker.</a> </p>
+          <a className='resumeButton' download='resume' href={Resume} rel="noreferrer" target='_blank'>DOWNLOAD RESUME</a>
         </div>
       </div>
     </div>
