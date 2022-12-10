@@ -12,7 +12,7 @@ $med-size: 20px;
 $large-size: 30px;
 $xlarge-size: 35px;
 $huge-size: 55px;
-$massive-size: 140px;
+$massive-size: 120px;
 // FONT SIZE
 $small-font: 14px;
 $med-font: 18px;
@@ -241,10 +241,26 @@ $large-font: 24px;
   overflow-x: hidden;
   position: relative;
   font-weight: 570;
-  background: linear-gradient(-45deg, $link-base, $link-base, $white, $white);
+  // background: linear-gradient(-45deg, $light-base, $link-base, $white, $white);
 	background-size: 400% 400%;
 	animation: gradient 2.5s ease;
 	height: 100vh;
+}
+
+@font-face {
+  font-family: 'Skra';
+  src:  local('Skra'), url(./fonts/Skra-Regular.woff) format('woff'),
+      local('Skra'), url(./fonts/Skra-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Magilio';
+  src:  local('Magilio'), url(./fonts/MagilioRegular-8Mxvg.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gyahegi';
+  src:  local('Gyahegi'), url(./fonts/GyahegiPersonalUse-w1P6z.ttf) format('opentype');
 }
 
 .contactInfo {
@@ -448,12 +464,13 @@ $large-font: 24px;
 
 .displayTitle {
   color: $dark-base;
-  font-family: "Nabla";
+  font-family: "Gyahegi";
   font-palette: --myPalette;
   font-size: $massive-size;
   font-weight: bold;
-  margin-bottom: $med-size;
-  text-align: center;
+  margin-bottom: $huge-size;
+  text-align: left;
+  max-width: 50%;
 }
 
 @font-palette-values --myPalette {
@@ -467,8 +484,7 @@ $large-font: 24px;
   font-family: 'Spartan', sans-serif;
   font-size: 25px;
   font-weight: bold;
-  text-align: center;
-  width: 50%;
+  text-align: left;
 }
 
 .imageContainer {
@@ -517,7 +533,7 @@ $large-font: 24px;
 
 .leftTitle {
   color: $dark-base;
-  font-family: 'Spartan', sans-serif;
+  font-family: 'Magilio', sans-serif;
   font-weight: bold;
   font-size: $huge-size;
   justify-content: flex-start;
@@ -576,7 +592,6 @@ $large-font: 24px;
 
 .mainSection {
   align-items: center;
-  // background-color: $white;
   color: $dark-base;
   display: flex;
   flex-direction: column;
@@ -741,8 +756,10 @@ $large-font: 24px;
   font-family: 'Spartan', cursive;
   font-size: $med-font;
   font-weight: bolder;
-  padding: 16px 16px 10px 16px;
+  padding-top: $med-size;
+  padding-bottom: $med-size;
   text-decoration: none;
+  max-width: 300px;
 }
 
 .resumeButton:hover {
@@ -760,8 +777,8 @@ $large-font: 24px;
 
 .skillTitle {
   color: $dark-base;
-  font-family: 'Spartan', sans-serif;
-  font-size: $small-font;
+  font-family: 'Magilio', sans-serif;
+  font-size: $med-font;
   max-width: 300px;
 }
 
@@ -772,8 +789,8 @@ $large-font: 24px;
 .welcomeTextContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 600px;
 }
@@ -781,8 +798,7 @@ $large-font: 24px;
 .welcomeText {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: $large-size;
   margin-top: 100px;
   margin-bottom: $huge-size;
 }

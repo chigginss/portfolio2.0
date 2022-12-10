@@ -15,7 +15,8 @@ export default function Experience() {
   
   return (
     <div id="experience" className={`experience fade-in-section ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
-      <div className='leftTitle'>Stack</div>
+      <div className='leftTitle'>Experience</div>
+      <p className='aboutMeText'>Outside of work, I've built Instagram Effects with Spark AR, sites like this using React, and Visulaztions in D3. I work with:</p>
       <div className="experienceContent">
         <div className='columnContainer'>
           <div className='column'>

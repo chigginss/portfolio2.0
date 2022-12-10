@@ -19,12 +19,14 @@ export default function About() {
     <div id={'about'}>
     <div className={`about fade-in-section-about ${isVisible ? 'is-visible' : ''}`} ref={domRef}>
       <div className="aboutMeContainer">
-        <img className="portrait" src={portrait} alt="portrait" />
         <div className="aboutMe">
+          <div className='leftTitle'>About</div>
           <p className="aboutMeText">Hi, I'm Cierra! I have over 3 years experience in Web, iOS and Android development.  </p>
-          <p className='aboutMeText'> I've worked at <a className='link' href='hbomax.com'>HBO MAX</a>, and previously at <a className='link' href='grokker.com'> Grokker.</a> </p>
-          <a className='resumeButton' download='resume' href={Resume} rel="noreferrer" target='_blank'>DOWNLOAD RESUME</a>
+          <p className='aboutMeText'> I previously worked at <a className='link' href='hbomax.com'>HBO MAX</a>, and <a className='link' href='grokker.com'> Grokker.</a> </p>
+          <p className='aboutMeText'> A couple months ago, I quit my job, packed up my life, and moveed from the US to New Zealand.</p>
+          <a className='resumeButton' download='resume' href={Resume} rel="noreferrer" target='_blank'> DOWNLOAD RESUME</a>
         </div>
+        <img className="portrait" src={portrait} alt="portrait" />
       </div>
     </div>
     </div>

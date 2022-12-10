@@ -14,10 +14,11 @@ export default function Home() {
         <Header/>
         <div className="welcomeTextContainer">
           <div className="welcomeText">
-              <div className="displayTitle lineUp">Cierra Higgins</div>
-              <div className="hugeTitle lineUp">Full Stack Software Engineer</div>
+              <div className="hugeTitle lineUp">My name is</div>
+              <div className="displayTitle lineUp"> Cierra Higgins</div>
+              <div className="hugeTitle lineUp">I'm a Full Stack Software Engineer.</div>
+              <a className="resumeButton" href="#about">GET TO KNOW ME</a>
           </div>
-          <a className="resumeButton" href="#about">GET TO KNOW ME</a>
         </div>
         <div className="mainSection fadeIn">
           <About/>
