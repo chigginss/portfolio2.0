@@ -10,7 +10,7 @@ function Header() {
         <div>
             <div className="headerBar">
                 <div className="headerContainer">
-                    <div className="headerName">CIERRA HIGGINS</div>
+                    {/* <div className="headerName">CIERRA HIGGINS</div> */}
                 </div>
                 <div className="headerLinks">
                     <a href="#about" className="headerLink">About</a>

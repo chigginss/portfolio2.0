@@ -7,6 +7,7 @@ $dark-base: #4B5267;
 $link-base: #8661C1;
 $white: #FFFFFF;
 // SPACING + SIZE
+$tiny-size: 5px;
 $small-size: 10px;
 $med-size: 20px;
 $large-size: 30px;
@@ -14,9 +15,11 @@ $xlarge-size: 35px;
 $huge-size: 55px;
 $massive-size: 120px;
 // FONT SIZE
+$tiny-font: 10px;
 $small-font: 14px;
 $med-font: 18px;
 $large-font: 24px;
+$huge-font: 30px;
 //////////////////
 
 .about {
@@ -32,6 +35,7 @@ $large-font: 24px;
   .aboutMe {
     display: flex;
     flex-direction: column;
+    font-size: $large-font;
     text-align: center;
     flex: 1;
   }
@@ -43,9 +47,9 @@ $large-font: 24px;
 
 .aboutMeText {
   color: $dark-base;
-  font-size: $large-font;
+  font-size: $huge-font;
   font-weight: lighter;
-  margin: $large-font;
+  margin: $small-font;
   text-align: left;
 }
 
@@ -201,30 +205,9 @@ $large-font: 24px;
   }
 }
 
-.column {
-  display: flex;
-  color: $white;
-  flex-direction: column;
-  font-size: $small-font;
-  margin: $med-size;
-  text-align: center;
-}
-
-.columnContainer {
-  display: flex;
-  text-align: center;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: $small-size;
-}
-
 .contact {
-  height: 400px;
-  margin-left: $huge-size;
   margin-top: $huge-size;
-  margin-bottom: $huge-size;
-  background-color: $white;
+  margin-bottom: $massive-size;
 }
 
 .contactContent {
@@ -241,7 +224,6 @@ $large-font: 24px;
   overflow-x: hidden;
   position: relative;
   font-weight: 570;
-  // background: linear-gradient(-45deg, $light-base, $link-base, $white, $white);
 	background-size: 400% 400%;
 	animation: gradient 2.5s ease;
 	height: 100vh;
@@ -327,7 +309,7 @@ $large-font: 24px;
   opacity: 0;
   transform: translateY(20vh);
   visibility: hidden;
-  transition: opacity 0.6s ease-out;
+  transition: opacity 0.8s ease-out;
   will-change: opacity, visibility;
 }
 
@@ -352,16 +334,14 @@ $large-font: 24px;
 }
 
 .experience {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
   margin-left: $huge-size;
   margin-top: $huge-size;
-  margin-bottom: $huge-size;
+  margin-bottom: $massive-size;
   width: 800px;
-  text-align: center;
   opacity: 1;
 }
 
@@ -375,15 +355,7 @@ $large-font: 24px;
   display: flex;
   flex-direction: column;
   text-align: center;
-}
-
-.footer {
-  align-items: center;
-  background-color: $dark-base;
-  display: flex;
   justify-content: center;
-  margin-top: $huge-size; 
-  width: 100%;
 }
 
 .footerText {
@@ -392,7 +364,6 @@ $large-font: 24px;
   padding: $large-font;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Bungee', cursive;
 }
 
 .hamburgerMenu {
@@ -449,13 +420,6 @@ $large-font: 24px;
     color: $dark-base;
     text-decoration: none;
   }
-}
-
-.headerName {
-  color: $dark-base;
-  font-family: 'Bungee', cursive;
-  font-size: $med-font;
-  padding-left: $med-size;
 }
 
 .hidden {
@@ -519,18 +483,6 @@ $large-font: 24px;
   }
 }
 
-.experienceTitle {
-  color: $dark-base;
-  font-family: 'Spartan', sans-serif;
-  font-weight: bold;
-  font-size: $huge-size;
-  justify-content: center;
-  text-align: left;
-  margin-left: $huge-size;
-  margin-left: $huge-size;
-  width: 100%;
-}
-
 .leftTitle {
   color: $dark-base;
   font-family: 'Magilio', sans-serif;
@@ -538,21 +490,9 @@ $large-font: 24px;
   font-size: $huge-size;
   justify-content: flex-start;
   text-align: left;
+  margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 20px;
-  width: 100%;
-}
-
-.rightTitle {
-  color: $dark-base;
-  font-family: 'Spartan', sans-serif;
-  font-weight: bold;
-  font-size: $huge-size;
-  justify-content: flex-end;
-  text-align: left;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  width: 100%;
 }
 
 .link {
@@ -589,13 +529,13 @@ $large-font: 24px;
   }
 }
 
-
 .mainSection {
   align-items: center;
   color: $dark-base;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 100px;
   text-align: center;
 }
@@ -611,7 +551,6 @@ $large-font: 24px;
 		background-position: 0% 50%;
 	}
 }
-
 
 .menu {
   opacity: 1;
@@ -748,8 +687,39 @@ $large-font: 24px;
   }
 }
 
+.notVisible {
+  opacity: 0;
+}
+
 .resumeButton {
-  // border: 1px solid $light-base;
+  border: 1px solid $light-base;
+  border-radius: $small-size;
+  background-color: $white;
+  color: $light-base;
+  font-family: 'Spartan', cursive;
+  font-size: $med-font;
+  font-weight: bolder;
+  padding-top: $med-size;
+  padding-bottom: $med-size;
+  padding-left: $small-size;
+  padding-right: $small-size;
+  text-decoration: none;
+  max-width: 300px;
+}
+
+.resumeButton:hover {
+  background-color: $white;
+  border: 1px solid $dark-base;
+  color: $dark-base;
+  text-decoration: none;
+}
+
+.resumeButtonContainer {
+  margin: $med-size;
+  align-items: flex-start;
+}
+
+.ctaText {
   border-radius: $small-size;
   background-color: $white;
   color: $light-base;
@@ -762,28 +732,34 @@ $large-font: 24px;
   max-width: 300px;
 }
 
-.resumeButton:hover {
+.ctaText:hover {
   background-color: $white;
   color: $dark-base;
-  // border: 1px solid $dark-base;
   text-decoration: none;
 }
 
-.resumeText {
+.skillColumn {
+  display: flex;
   color: $white;
-  text-decoration: none;
-  font-weight: bolder;
+  flex-direction: column;
+  font-size: $small-font;
+  margin: $med-size;
+  text-align: center;
+}
+
+.skillColumnContainer {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: $small-size;
 }
 
 .skillTitle {
   color: $dark-base;
-  font-family: 'Magilio', sans-serif;
   font-size: $med-font;
   max-width: 300px;
-}
-
-.socialIcons {
-  margin-bottom: $large-size;
 }
 
 .welcomeTextContainer {
@@ -806,16 +782,16 @@ $large-font: 24px;
 @media (max-width: 650px) {
   .about {
     padding: $small-size;
+    margin-left: 0px;
+    margin-top: $small-size;
+    margin-bottom: $small-size;
     flex-direction: column;
-  }
-
-  .aboutMe {
-    margin: $large-size;
   }
 
   .aboutMeText {
     font-size: $med-font;
-    max-width: 300px;
+    max-width: 325px;
+    text-align: center;
   }
   
   .aboutMeContainer {
@@ -835,6 +811,19 @@ $large-font: 24px;
 
   .columnContainer {
     flex-direction: column;
+  }
+
+  .contact {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contactContent {
+    align-items: center;
+    justify-content: center;
+    margin-top: $massive-size;
+    text-align: center;
   }
 
   .content {
@@ -859,9 +848,17 @@ $large-font: 24px;
     font-size: $huge-size;
   }
 
-  .experienceTitle {
-    font-size: $large-size;
-    max-width: 300px;
+  .experience {
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: $small-size;
+    padding-top: $large-size;
+  }
+
+  .footerText { 
+    text-align: center;
+    font-size: $small-font;
   }
 
   .headerContent {
@@ -895,45 +892,56 @@ $large-font: 24px;
   }
 
   .leftTitle {
+    align-items: center;
     font-size: $large-size;
+    justify-content: center;
+    margin-bottom: 0px;
+    text-align: center;
   }
 
   .image {
     display: none;
+    justify-content: center;
+    align-items: center;
   }
 
   .mainSection {
     width: 100%;
+    margin-top: 20px;
   }
 
   .meText {
-    font-size: $med-font;
+    font-size: $large-font;
     max-width: 300px;
+  }
+
+  .resumeButtonContainer {
+    margin: $med-size;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .skillColumn {
+    font-size: $tiny-font;
+    margin: $small-size;
+  }
+
+  .skillColumnContainer {
+    flex-direction: row;
   }
 
   .skillTitle {
     max-width: 100%;
+    font-size: $tiny-font;
   }
 
-  .styledButton {
-      color: #FFCF99;
-      background-color: transparent;
-      border: 1px solid #FFCF99;
-      border-radius: 10px;
-      font-size: $med-font;
-      font-weight: bold;
-      font-family: 'Spartan', cursive;
-      text-decoration: none;
-      margin-top: 20px;
+  .visible {
+    opacity: 1;
+  }
 
-      :hover {
-          color: #354674;
-          border: 1px solid #354674;
-          text-decoration: none
-      }
-
-      @media (max-width: 600px) {
-        margin-top: 90px;
-      }
+  .welcomeTextContainer {
+    height: 450px;
+    margin-top: $huge-size;
+    margin-bottom: $huge-size;
   }
 }
