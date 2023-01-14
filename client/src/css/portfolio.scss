@@ -14,12 +14,13 @@ $large-size: 30px;
 $xlarge-size: 35px;
 $huge-size: 55px;
 $massive-size: 120px;
+$xxlarge-size: 140px;
 // FONT SIZE
 $tiny-font: 10px;
 $small-font: 14px;
 $med-font: 18px;
 $large-font: 24px;
-$huge-font: 30px;
+$huge-font: 60px;
 //////////////////
 
 .about {
@@ -28,8 +29,9 @@ $huge-font: 30px;
   flex-direction: row;
   justify-content: center;
   margin-top: $huge-size;
-  margin-bottom: $huge-size;
+  margin-bottom: $large-size;
   margin-left: $huge-size;
+  padding-top: $huge-size;
   width: 800px;
 
   .aboutMe {
@@ -47,7 +49,7 @@ $huge-font: 30px;
 
 .aboutMeText {
   color: $dark-base;
-  font-size: $huge-font;
+  font-size: $large-font;
   font-weight: lighter;
   margin: $small-font;
   text-align: left;
@@ -213,6 +215,7 @@ $huge-font: 30px;
 .contactContent {
   display: flex;
   flex-direction: column;
+  padding-top: $huge-size;
   transition: opacity 0.5s;
   width: 800px;
   opacity: 1;
@@ -221,12 +224,6 @@ $huge-font: 30px;
 .content {
   background-color: $white;
   font-family: 'Spartan', sans-serif;
-  overflow-x: hidden;
-  position: relative;
-  font-weight: 570;
-	background-size: 400% 400%;
-	animation: gradient 2.5s ease;
-	height: 100vh;
 }
 
 @font-face {
@@ -309,7 +306,7 @@ $huge-font: 30px;
   opacity: 0;
   transform: translateY(20vh);
   visibility: hidden;
-  transition: opacity 0.8s ease-out;
+  transition: opacity 0.6s ease-out;
   will-change: opacity, visibility;
 }
 
@@ -323,7 +320,7 @@ $huge-font: 30px;
   opacity: 0;
   transform: translateY(9vh);
   visibility: hidden;
-  transition: opacity 0.6s ease-out, transform .8s ease-out;
+  transition: opacity 0.6s ease-out, transform .4s ease-out;
   will-change: opacity, visibility;
 }
 
@@ -339,8 +336,8 @@ $huge-font: 30px;
   justify-content: flex-start;
   align-content: flex-start;
   margin-left: $huge-size;
-  margin-top: $huge-size;
-  margin-bottom: $massive-size;
+  margin-bottom: $huge-size;
+  padding-top: $massive-size;
   width: 800px;
   opacity: 1;
 }
@@ -413,6 +410,7 @@ $huge-font: 30px;
 .headerLink {
   color: $light-base;
   cursor: pointer;
+  font-weight: bolder;
   font-size: $med-font;
   margin: $large-size;
   
@@ -452,7 +450,7 @@ $huge-font: 30px;
 }
 
 .imageContainer {
-  width: 400px;
+  width: 450px;
 }
 
 .image {
@@ -487,12 +485,11 @@ $huge-font: 30px;
   color: $dark-base;
   font-family: 'Magilio', sans-serif;
   font-weight: bold;
-  font-size: $huge-size;
+  font-size: $huge-font;
   justify-content: flex-start;
   text-align: left;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin-bottom: $med-size;
+  margin-left: $small-font;
 }
 
 .link {
@@ -606,6 +603,7 @@ $huge-font: 30px;
 }
 
 .portrait {
+  margin: $small-size;
   max-height: 450px;
   max-width: 450px;
 }
@@ -692,12 +690,11 @@ $huge-font: 30px;
 }
 
 .resumeButton {
-  border: 1px solid $light-base;
   border-radius: $small-size;
   background-color: $white;
   color: $light-base;
   font-family: 'Spartan', cursive;
-  font-size: $med-font;
+  font-size: $large-font;
   font-weight: bolder;
   padding-top: $med-size;
   padding-bottom: $med-size;
@@ -709,7 +706,6 @@ $huge-font: 30px;
 
 .resumeButton:hover {
   background-color: $white;
-  border: 1px solid $dark-base;
   color: $dark-base;
   text-decoration: none;
 }
@@ -758,7 +754,8 @@ $huge-font: 30px;
 
 .skillTitle {
   color: $dark-base;
-  font-size: $med-font;
+  font-size: 12px;
+  font-weight: bolder;
   max-width: 300px;
 }
 
@@ -781,11 +778,10 @@ $huge-font: 30px;
 
 @media (max-width: 650px) {
   .about {
-    padding: $small-size;
-    margin-left: 0px;
-    margin-top: $small-size;
-    margin-bottom: $small-size;
     flex-direction: column;
+    margin-bottom: $small-size;
+    margin-left: 0px;
+    padding-top: $large-size;
   }
 
   .aboutMeText {
@@ -822,11 +818,11 @@ $huge-font: 30px;
   .contactContent {
     align-items: center;
     justify-content: center;
-    margin-top: $massive-size;
     text-align: center;
   }
 
   .content {
+    overflow-x: hidden;
     width: 100%;
   }
 
@@ -852,7 +848,7 @@ $huge-font: 30px;
     align-items: center;
     margin-left: 0px;
     margin-bottom: 0px;
-    margin-top: $small-size;
+    margin-top: $huge-size;
     padding-top: $large-size;
   }
 
@@ -863,10 +859,6 @@ $huge-font: 30px;
 
   .headerContent {
     align-items: flex-end;
-  }
-
-  .headerBar {
-    justify-content: space-evenly;
   }
 
   .headerLinks {
@@ -915,6 +907,10 @@ $huge-font: 30px;
     max-width: 300px;
   }
 
+  .resumeButton {
+    font-size: $med-font;
+  }
+
   .resumeButtonContainer {
     margin: $med-size;
     max-width: 100%;
@@ -937,11 +933,13 @@ $huge-font: 30px;
 
   .visible {
     opacity: 1;
+    transition: opacity 0.6s ease-out;
+    transform: translateY(20vh);
+    visibility: visible;
+    will-change: opacity, visibility;
   }
 
   .welcomeTextContainer {
-    height: 450px;
-    margin-top: $huge-size;
-    margin-bottom: $huge-size;
+    height: 250px;
   }
 }

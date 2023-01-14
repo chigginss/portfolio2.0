@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import '../css/portfolio.scss';
 import LinkedInIcon from '../icons/LinkedInIcon.js';
 import GitHubIcon from '../icons/GitHubIcon.js';
@@ -6,14 +6,15 @@ import MailIcon from '../icons/MailIcon.js';
 
 export default function Contact() {
 
-  const [isVisible, setVisible] = React.useState(true);
-  const domRef = React.useRef();
-  React.useEffect(() => {
+  const [isVisible, setVisible] = useState(true);
+  const domRef = useRef();
+  useEffect(() => {
+    const current = domRef.current;
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => setVisible(entry.isIntersecting));
     });
-    observer.observe(domRef.current);
-    return () => observer.unobserve(domRef.current);
+    observer.observe(current);
+    return () => observer.unobserve(current);
   }, []);
 
   return (
@@ -21,7 +22,7 @@ export default function Contact() {
       <div id="contact">
         <div className="contactContent">
             <h1 className="leftTitle">Contact Me</h1>
-            <p className="aboutMeText">I'm currently looking for new opportunities. I'm interested in work in New Zealand, the US and everywhere else.</p>
+            <p className="aboutMeText">I'm currently looking for my next adventure - I recently moved to New Zealand from the US, and I'm hoping to continue my journey here. However, I'm still open to positions based in the US, and everywhere else.</p>
         </div>
         <div className="socialIcons" >
           <a href="mailto:cierramhiggins@gmail.com">

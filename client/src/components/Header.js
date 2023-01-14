@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import MailIcon from '../icons/MailIcon.js';
-import LinkedInIcon from '../icons/LinkedInIcon.js';
-import GitHubIcon from '../icons/GitHubIcon.js';
 
 function Header() {
     const [open, setOpen] = useState(false);
