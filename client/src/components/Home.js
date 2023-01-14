@@ -16,7 +16,6 @@ export default function Home() {
       setScrollTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
-    console.log('what is scroll top', scrollTop)
 
     if (!isVisible && scrollTop > 0) {
       setIsVisible(true);
