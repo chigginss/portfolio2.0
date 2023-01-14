@@ -49,8 +49,7 @@ $huge-font: 60px;
 
 .aboutMeText {
   color: $dark-base;
-  font-size: $large-font;
-  font-weight: lighter;
+  font-size: 22px;
   margin: $small-font;
   text-align: left;
 }
@@ -420,6 +419,28 @@ $huge-font: 60px;
   }
 }
 
+.inOrder {
+  animation: 2s in-order;
+}
+
+@keyframes in-order {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -603,9 +624,10 @@ $huge-font: 60px;
 }
 
 .portrait {
+  border-radius: .8%;
   margin: $small-size;
-  max-height: 450px;
-  max-width: 450px;
+  max-height: 480px;
+  max-width: 480px;
 }
 
 .meText {
@@ -694,7 +716,7 @@ $huge-font: 60px;
   background-color: $white;
   color: $light-base;
   font-family: 'Spartan', cursive;
-  font-size: $large-font;
+  font-size: $med-font;
   font-weight: bolder;
   padding-top: $med-size;
   padding-bottom: $med-size;
@@ -782,10 +804,11 @@ $huge-font: 60px;
     margin-bottom: $small-size;
     margin-left: 0px;
     padding-top: $large-size;
+    padding-bottom: $med-size;
   }
 
   .aboutMeText {
-    font-size: $med-font;
+    font-size: 22px;
     max-width: 325px;
     text-align: center;
   }
@@ -816,6 +839,8 @@ $huge-font: 60px;
   }
 
   .contactContent {
+    padding-top: $massive-size;
+    margin-top: $huge-size;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -824,6 +849,10 @@ $huge-font: 60px;
   .content {
     overflow-x: hidden;
     width: 100%;
+  }
+
+  .socialIcons {
+    margin-bottom: $huge-size;
   }
 
   .contactInfo {
@@ -841,7 +870,7 @@ $huge-font: 60px;
   }
 
   .displayTitle {
-    font-size: $huge-size;
+    font-size: 60px;
   }
 
   .experience {
@@ -849,7 +878,6 @@ $huge-font: 60px;
     margin-left: 0px;
     margin-bottom: 0px;
     margin-top: $huge-size;
-    padding-top: $large-size;
   }
 
   .footerText { 
@@ -885,7 +913,7 @@ $huge-font: 60px;
 
   .leftTitle {
     align-items: center;
-    font-size: $large-size;
+    font-size: 45px;
     justify-content: center;
     margin-bottom: 0px;
     text-align: center;
@@ -937,6 +965,10 @@ $huge-font: 60px;
     transform: translateY(20vh);
     visibility: visible;
     will-change: opacity, visibility;
+  }
+
+  .welcomeText {
+    margin-left: $small-size;
   }
 
   .welcomeTextContainer {

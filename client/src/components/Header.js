@@ -10,9 +10,9 @@ function Header() {
                     {/* <div className="headerName">CIERRA HIGGINS</div> */}
                 </div>
                 <div className="headerLinks">
-                    <a href="#about" className="headerLink">About</a>
-                    <a href="#experience" className="headerLink">Experience</a>
-                    <a href="#contact" className="headerLink">Contact</a>
+                    <a href="#about" className="headerLink inOrder">About</a>
+                    <a href="#experience" className="headerLink inOrder">Experience</a>
+                    <a href="#contact" className="headerLink inOrder">Contact</a>
                 </div>
                 <div className={open ? 'burgerOpen' : 'burgerClosed'} onClick={() => setOpen(!open)}>
                     <div></div>

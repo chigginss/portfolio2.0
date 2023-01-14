@@ -41,7 +41,7 @@ export default function Home() {
               <About/>
               <Experience/>
               <Contact />
-              <span className='footerText'>Designed and built by Cierra Higgins © 2023.</span>
+              <span className='footerText'>Designed and built by Cierra Higgins in 2023.</span>
             </div>
         </div>
     </div>

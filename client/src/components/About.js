@@ -22,7 +22,8 @@ export default function About() {
         <div className='aboutMe'>
           <div className='leftTitle'>About</div>
           <p className='aboutMeText'>Hi, I'm Cierra! I might be the only SWE with an English Degree.</p>
-          <p className='aboutMeText'>My journey with coding began in 2018 (if you don't count Myspace) when I enrolled in Hackbright Academy's Software Engineering course. Many sprints later, I've squashed countless bugs, and contributed to major launches for Fortune 500's and start-ups alike.</p>
+          <p className='aboutMeText'>My journey as an engineer began in 2018 (if you don't count Myspace) when I enrolled in <a className="link" target="_blank" rel="noreferrer" href="https://hackbrightacademy.com">Hackbright Academy's</a> Software Engineering course. 
+          Many sprints later, I've contributed to major launches for Fortune 500's and startups alike.</p>
         </div>
         <img className='portrait' src={portrait} alt='portrait' />
       </div>
