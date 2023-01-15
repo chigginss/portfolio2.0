@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
-// components
 import About from './About.js';
 import Experience from './Experience.js';
 import Header from './Header.js';
 import Contact from './Contact.js';
-// SCSS
-import '../css/portfolio.scss';
+import './portfolio.scss';
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);

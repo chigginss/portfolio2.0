@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.e3a20258.chunk.css",
+    "main.js": "./static/js/main.8a698ebb.chunk.js",
+    "main.js.map": "./static/js/main.8a698ebb.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.5a3e073c.js",
+    "runtime-main.js.map": "./static/js/runtime-main.5a3e073c.js.map",
+    "static/js/2.13f8a5ca.chunk.js": "./static/js/2.13f8a5ca.chunk.js",
+    "static/js/2.13f8a5ca.chunk.js.map": "./static/js/2.13f8a5ca.chunk.js.map",
+    "static/js/3.85d67a21.chunk.js": "./static/js/3.85d67a21.chunk.js",
+    "static/js/3.85d67a21.chunk.js.map": "./static/js/3.85d67a21.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.e3a20258.chunk.css.map": "./static/css/main.e3a20258.chunk.css.map",
+    "static/js/2.13f8a5ca.chunk.js.LICENSE.txt": "./static/js/2.13f8a5ca.chunk.js.LICENSE.txt",
+    "static/media/CierraHigginsResume.5554a353.pdf": "./static/media/CierraHigginsResume.5554a353.pdf",
+    "static/media/portfolio.scss": "./static/media/MagilioRegular-8Mxvg.4bb4f911.otf",
+    "static/media/portrait1.d300e41a.jpg": "./static/media/portrait1.d300e41a.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a3e073c.js",
+    "static/js/2.13f8a5ca.chunk.js",
+    "static/css/main.e3a20258.chunk.css",
+    "static/js/main.8a698ebb.chunk.js"
+  ]
+}

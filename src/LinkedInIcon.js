@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/portfolio.scss';
+import './portfolio.scss';
 
 const LinkedInIcon = ({
     className,

@@ -226,12 +226,6 @@ $huge-font: 60px;
 }
 
 @font-face {
-  font-family: 'Skra';
-  src:  local('Skra'), url(./fonts/Skra-Regular.woff) format('woff'),
-      local('Skra'), url(./fonts/Skra-Regular.woff2) format('woff2');
-}
-
-@font-face {
   font-family: 'Magilio';
   src:  local('Magilio'), url(./fonts/MagilioRegular-8Mxvg.otf) format('opentype');
 }
