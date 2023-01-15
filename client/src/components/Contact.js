@@ -22,8 +22,8 @@ export default function Contact() {
       <div id="contact">
         <div className="contactContent">
             <h1 className="leftTitle">Contact Me</h1>
-            <p className="aboutMeText">I'm currently looking for my next adventure. </p>
-            <p className="aboutMeText">I recently moved to New Zealand from the US, and I'm hoping to continue my journey here. However, I'm open to positions based in the US, and everywhere else. Don't be a stranger!</p>
+            <p className="aboutMeText">I'm currently looking for my next adventure! </p>
+            <p className="aboutMeText">I recently moved to New Zealand from the US, and I'm hoping to continue my journey here. However, I'm open to positions based in the US, and everywhere else.</p>
         </div>
         <div className="socialIcons" >
           <a href="mailto:cierramhiggins@gmail.com">
