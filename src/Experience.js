@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './portfolio.scss';
-import Resume from './content/CierraHigginsResume.pdf';
+import Resume from './CierraHigginsResume.pdf';
 
 export default function Experience() {
 
