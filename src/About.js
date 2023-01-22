@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './portfolio.scss';
-import portrait from './portrait1.jpg';
+import portrait from './images/portrait1.jpg';
 
 export default function About() {
 

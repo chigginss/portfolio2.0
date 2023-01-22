@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './portfolio.scss';
-import LinkedInIcon from './LinkedInIcon.js';
-import GitHubIcon from './GitHubIcon.js';
-import MailIcon from './MailIcon.js';
+import LinkedInIcon from './icons/LinkedInIcon.js';
+import GitHubIcon from './icons/GitHubIcon.js';
+import MailIcon from './icons/MailIcon.js';
 
 export default function Contact() {
 
