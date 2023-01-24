@@ -841,7 +841,8 @@ $huge-font: 60px;
   }
 
   .content {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
   }
 
